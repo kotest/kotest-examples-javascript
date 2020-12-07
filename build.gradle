@@ -26,7 +26,7 @@ kotlin {
    sourceSets {
       main {
          dependencies {
-            implementation 'io.ktor:ktor-client-js:1.4.20'
+            implementation 'io.ktor:ktor-client-js:1.4.2'
          }
       }
       test {
