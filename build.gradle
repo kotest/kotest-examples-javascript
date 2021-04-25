@@ -1,12 +1,12 @@
 buildscript {
-   ext.kotlin_version = '1.4.20'
+   ext.kotlin_version = '1.4.32'
    repositories {
       mavenCentral()
    }
 }
 
 plugins {
-   id 'org.jetbrains.kotlin.js' version '1.4.20'
+   id 'org.jetbrains.kotlin.js' version '1.4.32'
 }
 
 repositories {
@@ -26,15 +26,15 @@ kotlin {
    sourceSets {
       main {
          dependencies {
-            implementation 'io.ktor:ktor-client-js:1.4.2'
+            implementation 'io.ktor:ktor-client-js:1.5.3'
          }
       }
       test {
          dependencies {
-            implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-js:1.4.2'
-            implementation 'io.kotest:kotest-assertions-core-js:4.3.1'
-            implementation 'io.kotest:kotest-framework-api-js:4.3.1'
-            implementation 'io.kotest:kotest-framework-engine-js:4.3.1'
+            implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-js:1.4.3'
+            implementation 'io.kotest:kotest-assertions-core-js:4.4.3'
+            implementation 'io.kotest:kotest-framework-api-js:4.4.3'
+            implementation 'io.kotest:kotest-framework-engine-js:4.4.3'
          }
       }
    }
