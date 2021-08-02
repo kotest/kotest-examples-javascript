@@ -31,9 +31,8 @@ kotlin {
       }
       val jsTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-assertions-core-js:5.0.0.376-SNAPSHOT")
-            implementation("io.kotest:kotest-framework-api-js:5.0.0.376-SNAPSHOT")
-            implementation("io.kotest:kotest-framework-engine-js:5.0.0.376-SNAPSHOT")
+            implementation("io.kotest:kotest-assertions-core-js:5.0.0.377-SNAPSHOT")
+            implementation("io.kotest:kotest-framework-engine-js:5.0.0.377-SNAPSHOT")
          }
       }
    }
