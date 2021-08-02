@@ -8,7 +8,15 @@ private val client = HttpClient(Js)
 
 suspend fun fetch(): Dog {
    val resp = client.get<HttpResponse>("https://dog.ceo/api/breeds/image/random")
-   return JSON.parse<Dog>(resp.readText())
+   var message = ""
+   var status = ""
+   JSON.parse<Dog>(resp.readText()) { key, value ->
+      when (key) {
+         "message" -> message = value.toString()
+         "status" -> status = value.toString()
+      }
+   }
+   return Dog(message, status)
 }
 
 data class Dog(val message: String, val status: String)

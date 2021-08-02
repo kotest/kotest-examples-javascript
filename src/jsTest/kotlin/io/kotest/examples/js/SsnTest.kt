@@ -1,5 +1,8 @@
+package io.kotest.examples.js
+
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
+import validateSocial
 
 class SsnTest : FunSpec({
 
