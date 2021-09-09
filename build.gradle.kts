@@ -7,8 +7,8 @@ buildscript {
 }
 
 plugins {
-   kotlin("multiplatform").version("1.5.21")
-   id("io.kotest.multiplatform") version "5.0.0.3"
+   kotlin("multiplatform").version("1.5.30")
+   id("io.kotest.multiplatform") version "5.0.0.5"
 }
 
 repositories {
@@ -31,9 +31,17 @@ kotlin {
       }
       val jsTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-assertions-core-js:5.0.0.377-SNAPSHOT")
-            implementation("io.kotest:kotest-framework-engine-js:5.0.0.377-SNAPSHOT")
+            implementation("io.kotest:kotest-assertions-core-js:5.0.0.476-SNAPSHOT")
+            implementation("io.kotest:kotest-framework-engine-js:5.0.0.476-SNAPSHOT")
          }
       }
+   }
+}
+
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+   kotlinOptions {
+      apiVersion = "1.5"
+      verbose = true
    }
 }
