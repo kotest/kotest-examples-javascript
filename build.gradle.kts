@@ -39,7 +39,7 @@ kotlin {
             implementation("io.kotest:kotest-assertions-core:5.0.1")
             implementation("io.kotest:kotest-framework-engine:5.0.1")
             implementation("io.kotest:kotest-framework-datatest:5.0.1")
-            implementation("io.kotest:kotest-property:5.0.1")
+            implementation("io.kotest:kotest-property:5.3.0")
          }
       }
    }
