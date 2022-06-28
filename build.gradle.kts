@@ -31,7 +31,7 @@ kotlin {
    sourceSets {
       val jsMain by getting {
          dependencies {
-             implementation("io.ktor:ktor-client-js:2.0.2")
+             implementation("io.ktor:ktor-client-js:2.0.3")
          }
       }
       val jsTest by getting {
