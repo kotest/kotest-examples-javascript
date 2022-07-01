@@ -6,9 +6,10 @@ buildscript {
    }
 }
 
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-   kotlin("multiplatform").version("1.6.0")
-   id("io.kotest.multiplatform") version "5.3.1"
+   alias(libs.plugins.kotlin.multiplatform)
+   alias(libs.plugins.kotest.multiplatform)
 }
 
 repositories {
@@ -31,15 +32,15 @@ kotlin {
    sourceSets {
       val jsMain by getting {
          dependencies {
-             implementation("io.ktor:ktor-client-js:2.0.2")
+             implementation(libs.ktor.client.js)
          }
       }
       val jsTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-assertions-core:5.3.1")
-            implementation("io.kotest:kotest-framework-engine:5.3.0")
-            implementation("io.kotest:kotest-framework-datatest:5.3.1")
-            implementation("io.kotest:kotest-property:5.3.0")
+            implementation(libs.kotest.assertions.core)
+            implementation(libs.kotest.framework.engine)
+            implementation(libs.kotest.framework.datatest)
+            implementation(libs.kotest.property)
          }
       }
    }
