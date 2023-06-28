@@ -8,7 +8,7 @@ kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", versio
 kotest-framework-datatest = { module = "io.kotest:kotest-framework-datatest", version.ref = "kotest" }
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
 
-ktor-client-js = { module = "io.ktor:ktor-client-js", version = "2.0.3" }
+ktor-client-js = { module = "io.ktor:ktor-client-js", version = "2.3.2" }
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
