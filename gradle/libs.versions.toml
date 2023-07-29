@@ -1,6 +1,7 @@
 [versions]
-kotlin = "1.6.21"
-kotest = "5.3.2"
+kotlin = "1.8.21"
+kotest = "5.6.2"
+ktor = "2.3.2"
 
 [libraries]
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
@@ -8,7 +9,7 @@ kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", versio
 kotest-framework-datatest = { module = "io.kotest:kotest-framework-datatest", version.ref = "kotest" }
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
 
-ktor-client-js = { module = "io.ktor:ktor-client-js", version = "2.0.3" }
+ktor-client-js = { module = "io.ktor:ktor-client-js", version.ref = "ktor" }
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }

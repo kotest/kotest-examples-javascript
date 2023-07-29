@@ -54,7 +54,7 @@ tasks.withType<org.jetbrains.kotlin.gradle.dsl.KotlinCompile<*>>().configureEach
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
    kotlinOptions {
-      apiVersion = "1.6"
+      apiVersion = "1.8"
       verbose = true
    }
 }
