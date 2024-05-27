@@ -10,16 +10,13 @@ repositories {
 }
 
 kotlin {
-   targets {
-      js(IR) {
-         browser()
-         binaries.executable()
-      }
+   js(IR) {
+      nodejs()
    }
    sourceSets {
       val jsMain by getting {
          dependencies {
-             implementation(libs.ktor.client.js)
+            implementation(libs.ktor.client.js)
          }
       }
       val jsTest by getting {
