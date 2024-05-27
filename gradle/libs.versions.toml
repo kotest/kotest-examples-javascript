@@ -1,13 +1,11 @@
 [versions]
-kotlin = "1.9.10"
-kotest = "5.7.2"
+kotlin = "1.9.22"
+kotest = "5.10.0-LOCAL"
 ktor = "2.3.4"
 
 [libraries]
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", version.ref = "kotest" }
-kotest-framework-datatest = { module = "io.kotest:kotest-framework-datatest", version.ref = "kotest" }
-kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
 
 ktor-client-js = { module = "io.ktor:ktor-client-js", version.ref = "ktor" }
 
