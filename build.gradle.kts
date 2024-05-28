@@ -1,14 +1,6 @@
-buildscript {
-   repositories {
-      mavenCentral()
-      mavenLocal()
-      maven("https://oss.sonatype.org/content/repositories/snapshots")
-   }
-}
-
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
    alias(libs.plugins.kotlin.multiplatform)
+   alias(libs.plugins.kotest.multiplatform)
 }
 
 repositories {
@@ -18,28 +10,19 @@ repositories {
 }
 
 kotlin {
-   targets {
-      js(IR) {
-         browser {
-            testTask {
-               useMocha()
-            }
-         }
-         binaries.executable()
-      }
+   js(IR) {
+      nodejs()
    }
    sourceSets {
       val jsMain by getting {
          dependencies {
-             implementation(libs.ktor.client.js)
+            implementation(libs.ktor.client.js)
          }
       }
       val jsTest by getting {
          dependencies {
             implementation(libs.kotest.assertions.core)
             implementation(libs.kotest.framework.engine)
-            implementation(libs.kotest.framework.datatest)
-            implementation(libs.kotest.property)
          }
       }
    }
