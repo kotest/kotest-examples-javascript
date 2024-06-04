@@ -9,6 +9,7 @@ buildscript {
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
    alias(libs.plugins.kotlin.multiplatform)
+   alias(libs.plugins.kotest.multiplatform)
 }
 
 repositories {
@@ -18,15 +19,9 @@ repositories {
 }
 
 kotlin {
-   targets {
-      js(IR) {
-         browser {
-            testTask {
-               useMocha()
-            }
-         }
-         binaries.executable()
-      }
+   js(IR) {
+      browser()
+      binaries.executable()
    }
    sourceSets {
       val jsMain by getting {
